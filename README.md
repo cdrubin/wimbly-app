@@ -97,3 +97,19 @@ end
 
 ```
 
+-----
+Example `/etc/nginx/sites-enabled/[site]` script:
+```
+server {
+
+  listen 443 ssl;
+  server_name my-wimbly-site.domain.com;
+    
+  add_header X-Server $server_name;
+  include ssl.conf;
+  include cors.conf;
+
+  include /var/www/[site]/application.nginx; 
+    
+}
+```
