@@ -1,8 +1,8 @@
 
-location = /moo {
+location = /hello {
 
   content_by_lua '
-    ngx.say( "Hello" )
+    ngx.say( "hello" )
   ';
 
 }
