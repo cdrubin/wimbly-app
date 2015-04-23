@@ -1,8 +1,6 @@
 
 location = %(prefix)s/moo {
 
-  content_by_lua '
-    ngx.say( "Hello" )
-  ';
+  content_by_lua_file '%(app)s/cow/moo.lua';
 
 }
