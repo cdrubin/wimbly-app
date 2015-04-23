@@ -8,7 +8,7 @@ Requirements:
  - `/etc/nginx/nginx.conf` contains `lua_package_path` and `init_by_lua_file`:
 
 ### Don't forget to create an empty application.nginx file for first run
-When nginx is restarted it will run init.lua which in turn runs application.nginx which does preprocessing of all template files and creates a correct application.nginx from the template.
+When nginx is restarted it will run `init.lua` which in turn runs `init.wimbly` which does preprocessing of all template files and creates a correct `application.nginx` from the template.
 
 Empyting all `.nginx` files is sensible when restarting nginx because a bad config can only be fixed by a call to preprocess if that code is run. And init lua code is only run if the nginx configuration is correct.
 
