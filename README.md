@@ -117,7 +117,7 @@ server {
 ```
 
 -----
-Example [`init.wimbly`](https://github.com/cdrubin/wimbly-app/blob/master/init.wimbly)
+Example [`/etc/nginx/init.wimbly`](https://github.com/cdrubin/wimbly-app/blob/master/init.wimbly)
 This file usually asks that `.template files` within the application source code are preprocessed to make location and path substitutions.
 
 
