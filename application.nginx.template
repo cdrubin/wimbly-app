@@ -2,6 +2,7 @@
 location = /hello {
 
   content_by_lua '
+    ngx.header.content_type = 'text/plain';
     ngx.say( "hello" )
   ';
 
