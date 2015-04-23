@@ -1,0 +1,8 @@
+
+location = %(prefix)s/moo {
+
+  content_by_lua '
+    ngx.say( "Hello" )
+  ';
+
+}

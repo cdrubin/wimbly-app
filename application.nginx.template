@@ -1,0 +1,10 @@
+
+location = /moo {
+
+  content_by_lua '
+    ngx.say( "Hello" )
+  ';
+
+}
+
+include '%(app)s/controller/*/endpoints.nginx';

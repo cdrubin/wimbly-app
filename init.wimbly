@@ -1,0 +1,7 @@
+
+-- preprocess application configuration files
+
+wimbly.preprocess( '/var/www/lua', {
+  ['app'] = '/var/www/lua',
+  ['prefix'] = '/v2',
+} )
