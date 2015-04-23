@@ -7,7 +7,11 @@ Requirements:
  - `/etc/nginx/nginx.conf` contains `lua_package_path` and `init_by_lua_file`:
 
 
+-----
+`/etc/nginx/nginx.conf`:
+
 ```
+...
 lua_package_path "lualib/resty/?.lua;lualib/wimbly/?.lua;;";
 init_by_lua_file '/etc/nginx/init.lua';
 ```
