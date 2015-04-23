@@ -98,7 +98,7 @@ end
 ```
 
 -----
-Example `/etc/nginx/sites-enabled/[site]` script:
+Example `/etc/nginx/sites-enabled/[site]`:
 ```
 server {
 
@@ -113,3 +113,6 @@ server {
     
 }
 ```
+
+-----
+Example [`/var/www/[site]/application.nginx`](google.com):
