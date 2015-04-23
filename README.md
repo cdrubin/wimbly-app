@@ -12,6 +12,9 @@ lua_package_path "lualib/resty/?.lua;lualib/wimbly/?.lua;;";
 init_by_lua_file '/etc/nginx/init.lua';
 ```
 
+-----
+
+
 `/etc/nginx/init.lua`:
 ```
 -- # part of nginx-benchmark
