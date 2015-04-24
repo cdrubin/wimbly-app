@@ -1,13 +1,10 @@
 
 -- preprocess application configuration files
-
 wimbly.preprocess( '/var/www/lua', {
   ['app'] = '/var/www/lua',
   ['prefix'] = '/v2',
 } )
 
-ngx.log( ngx.ERR, 'about to do debug' )
-
+-- during development wrap all content_by_lua_file directives to display errors in browser 
 wimbly.debug( '/var/www/lua', 'endpoints%.nginx$' )
 
-ngx.log( ngx.ERR, 'done debug' )
