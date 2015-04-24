@@ -1,2 +1,2 @@
 application.nginx
-**/controller/endpoints.nginx
+controller/**/endpoints.nginx
