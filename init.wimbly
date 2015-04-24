@@ -5,3 +5,9 @@ wimbly.preprocess( '/var/www/lua', {
   ['app'] = '/var/www/lua',
   ['prefix'] = '/v2',
 } )
+
+ngx.log( ngx.ERR, 'about to do debug' )
+
+wimbly.debug( '/var/www/lua', 'endpoints%.nginx$' )
+
+ngx.log( ngx.ERR, 'done debug' )

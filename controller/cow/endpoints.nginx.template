@@ -1,6 +1,6 @@
 
-location = %(prefix)s/moo {
+location = %(prefix)s/cow/moo {
 
-  content_by_lua_file '%(app)s/cow/moo.lua';
+  content_by_lua_file '%(app)s/controller/cow/moo.lua';
 
 }
