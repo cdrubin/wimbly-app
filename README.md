@@ -7,7 +7,7 @@ Requirements:
  - [wimbly-lib](https://github.com/cdrubin/wimbly-lib) is present at `/var/lib/nginx/lualib/wimbly`
  - `/etc/nginx/nginx.conf` contains `lua_package_path` and `init_by_lua_file`:
 
-### Don't forget to create an empty application.nginx file for first run
+#### Don't forget to create an empty application.nginx file for first run
 When nginx is restarted it will run `/etc/nginx/init.lua` which in turn runs `/var/www/[site]/init.wimbly` which does preprocessing of all template files and creates a correct `application.nginx` from the template.
 
 Empyting all `.nginx` files is sensible when restarting nginx because a bad config can only be fixed by a call to preprocess if that code is run. And init lua code is only run if the nginx configuration is correct.
