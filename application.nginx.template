@@ -9,8 +9,4 @@ location = /hello {
 
 }
 
-
-# during development force nginx to reload lua files on every request
-lua_code_cache off;
-
 include '%(app)s/controller/*/endpoints.nginx';
