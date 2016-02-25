@@ -1,10 +1,10 @@
 
 -- preprocess application configuration files
-wimbly.preprocess( '/var/www/lua', {
-  ['app'] = '/var/www/lua',
+wimbly.preprocess( '$SITES_PREFIX/example', {
+  ['app'] = '$SITES_PREFIX/example',
   ['prefix'] = '/v2',
 } )
 
 -- during development wrap all content_by_lua_file directives to display errors in browser 
-wimbly.debug( '/var/www/lua', 'endpoints%.nginx$' )
+wimbly.debug( '$SITES_PREFIX/example', 'endpoints%.nginx$' )
 
