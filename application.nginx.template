@@ -9,4 +9,12 @@ location = /hello {
 
 }
 
+
 include '%(app)s/controller/*/endpoints.nginx';
+
+
+root %(app)s/static;
+index index.html;
+location / {
+  try_files $uri $uri/ =404;
+}
