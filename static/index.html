@@ -1,8 +1,63 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.1.1/dist/siimple.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/hyperapp@1.2.9/dist/hyperapp.min.js"></script>
 </head>
 <body>
-  <h1>Heading One</h1>
+
+<h1>Page heading</h1>
+
+<h2>Grid</h2>
+<div class="siimple-grid">
+  <div class="siimple-grid-row">
+      <div class="siimple-grid-col siimple-grid-col--5 siimple--bg-warning">5</div>
+      <div class="siimple-grid-col siimple-grid-col--7 siimple--bg-error">7</div>
+  </div>
+  <div class="siimple-grid-row">
+      <div class="siimple-grid-col siimple-grid-col--8 siimple--bg-light">8</div>
+      <div class="siimple-grid-col siimple-grid-col--4 siimple--bg-primary">4</div>
+  </div>
+</div>
+
+<h2>Table</h2>
+<div class="siimple-table siimple-table--striped">
+  <div class="siimple-table-header">
+    <div class="siimple-table-row">
+      <div class="siimple-table-cell" >Header 1</div>
+      <div class="siimple-table-cell">Header 2</div>
+      <div class="siimple-table-cell">Header 3</div>
+    </div>
+  </div>
+  <div class="siimple-table-body">
+    <div class="siimple-table-row">
+      <div class="siimple-table-cell" contenteditable="true" onchange="actions.change_one">Cell 1</div>
+      <div class="siimple-table-cell">Cell 2</div>
+      <div class="siimple-table-cell">Cell 3</div>
+    </div>        
+  </div>
+</div>
+
+  
+<script>
+
+const { h, app } = hyperapp
+
+const state = {
+  one: 1
+}
+
+const actions = {
+  change_one: value => state => ( { one: value } )
+}
+
+/* const view = ( state, actions ) => (
+
+) */
+
+
+const main = app( state, actions, view, document.body )
+
+</script>
+
 </body>
 </html>
