@@ -3,8 +3,8 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/spectre.css@0.5.7/dist/spectre.min.css">
   
-  <script src="https://cdn.jsdelivr.net/npm/hyperapp@1.2.9/dist/hyperapp.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@hyperapp/router@0.7.1/dist/router.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/hyperapp@1.2.9/dist/hyperapp.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@hyperapp/router@0.7.1/dist/router.min.js"></script> -->
 </head>
 <body>
 
@@ -67,9 +67,12 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="cows_table">
   </tbody>
 </table>
+
+
+<div id="app">Loading...</div>
 
 
 <script>
@@ -77,12 +80,22 @@
 // regular text
 fetch('//localhost:8008/hello')
   .then( function( response ) {
-    return response.text();
+    return response.text()
   } )
   .then( function ( text ) { 
-    console.log( text );
-  } );
+    console.log( text )
+  } )
 
+
+const { h, app } = hyperapp
+
+app( {
+  view: () => h( 'h1', 'Hi' ),
+  root: document.getElementById( 'app' )
+} )
+
+//const node = h("div", { class: "main" }, "Hello World" )  
+  
 // json data  
 fetch('//localhost:8008/v2/cow/rows')
   .then( function( response ) {
