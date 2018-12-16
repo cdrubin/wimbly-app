@@ -10,6 +10,10 @@ local pg = pgmoon.new( {
 
 assert( pg:connect() )
 
-local res = assert( pg:query( 'SELECT * FROM users' ) )
 
+local res = assert( pg:query( "INSERT INTO content ( c_title ) VALUES ( 'bull' ) " ) )
+ngx.say( cjson.encode( res ) )
+
+
+local res = assert( pg:query( 'SELECT * FROM content' ) )
 ngx.say( cjson.encode( res ) )
